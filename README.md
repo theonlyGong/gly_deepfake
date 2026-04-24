@@ -10,6 +10,7 @@
 - gly_train_v2.py是可以直接跑的训练代码
 - gly_single.py和gly_batch_test.py分别是单张预测和文件夹内图片预测的统计脚本。
 - freqnet_extraction和vit_extraction.py分别是下面两个论文的特征提取的流程脚本。
+- pre-processing文件夹内的脚本是一个视频分帧+人脸定位+截取扩展保存的脚本；主要是用了dlib去做。样例数据集是DeepfakeTIMIT，特意写成```os.walk```的递归寻找.avi的格式，应该很多数据都是可以通用的。
 
 ### 以上项目参考了：
 
