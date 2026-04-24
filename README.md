@@ -2,7 +2,7 @@
 
 这个项目参考于2025年的两篇论文，我只采取了他们的特征提取部分，load了他们的参数作为预训练权重。后续加入了混合的数据集（FF++ & Celeb-DF & GAN-based test data）进行训练简单观测了一下效果。如果感兴趣可以后续使用其他高质量公开数据集进行微调！！！
 
-- checkpoints 文件夹是预训练模型
+- 你需要自己创建一个checkpoints文件夹，checkpoints 文件夹是预训练模型（包含FreqNet的特征提取层+ViT-L的特征提取层即可）
   可从以下链接进行下载：通过Baidu网盘分享的文件: https://pan.baidu.com/s/15f5xOzYvCFNql01gUx48nw?pwd=6666 提取码: 6666
 - output文件夹内是训练的模型参数，按照时间makefile生成的，里面的best_model.pt文件就是训练的模型参数，可以直接```torch.load()```
   best_model.pt文件链接：通过网盘分享的文件：run_20260413_133506链接: https://pan.baidu.com/s/1NUnq-_EAyTKWPZ44abu1Aw?pwd=7777 提取码: 7777
