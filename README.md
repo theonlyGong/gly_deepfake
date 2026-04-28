@@ -1,6 +1,6 @@
 ### Instructions
 
-这个项目参考于2025年的两篇论文，我只采取了他们的特征提取部分，load了他们的参数作为预训练权重。后续加入了混合的数据集（FF++ & Celeb-DF & GAN-based test data）进行训练简单观测了一下效果。如果感兴趣可以后续使用其他高质量公开数据集进行微调！！！
+这个项目参考于2025年的两篇论文，我只采取了他们的特征提取部分，load了他们的参数作为预训练权重。后续加入了混合的数据集（FF++ & Celeb-DF & GAN-based test data中的部分人脸图片）进行训练简单观测了一下效果。如果感兴趣可以后续使用其他高质量公开数据集进行微调！！！
 
 - 你需要自己创建一个checkpoints文件夹，checkpoints 文件夹是预训练模型（包含FreqNet的特征提取层+ViT-L的特征提取层即可）
   可从以下链接进行下载：通过Baidu网盘分享的文件: https://pan.baidu.com/s/15f5xOzYvCFNql01gUx48nw?pwd=6666 提取码: 6666
@@ -24,7 +24,9 @@ Fatformer (2024)：
 论文链接：[Forgery-aware Adaptive Transformer for Generalizable Synthetic Image Detection](https://openaccess.thecvf.com/content/CVPR2024/papers/Liu_Forgery-aware_Adaptive_Transformer_for_Generalizable_Synthetic_Image_Detection_CVPR_2024_paper.pdf)
 Github链接：[GitHub - Michel-liu/FatFormer: [CVPR 2024\] The official repo for Forgery-aware Adaptive Transformer for Generalizable Synthetic Image Detection · GitHub](https://github.com/Michel-liu/FatFormer)
 
-初步做了60个epoch的训练，结果如下：
+### 初步训练效果
+
+- 初步做了60个epoch的训练，主要还是依赖于常用的数据集，结果如下：
 
 | 数据类型 | 数据量 | Precision | Recall | F1_score |  Acc   |
 | :------: | :----: | :-------: | :----: | :------: | :----: |
@@ -32,3 +34,11 @@ Github链接：[GitHub - Michel-liu/FatFormer: [CVPR 2024\] The official repo fo
 | 验证数据 | 12028  |  83.63%   | 97.00% |  90.04%  | 83.80% |
 
 推理时间：10 -16ms （A100显卡），占用GPU显存在16G左右。
+
+- 后续加入了kaggle的部分真实人脸数据集，可以参考这个链接去自动下载所需要的真是人脸。（主要还是为了解决 pos和neg的数据imbalance的问题）
+  Kaggle链接：[Kaggle human faces](https://www.kaggle.com/search?q=human+face+dataset+in%3Adatasets)
+
+| <mark>**训练第二轮**</mark> |  数据量     | Precision       | Recall       | F1_score       | Acc       |
+| :-------------------------: | :---: | :----: | :----: | :----: | :----: |
+|          训练数据           | 51663 | 84.38% | 96.80% | 90.17% | 84.29% |
+|          验证数据           | 12915 | 83.56% | 98.12% | 90.26% | 84.35% |
