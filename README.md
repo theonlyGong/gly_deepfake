@@ -35,7 +35,7 @@ Github链接：[GitHub - Michel-liu/FatFormer: [CVPR 2024\] The official repo fo
 
 推理时间：10 -16ms （A100显卡），占用GPU显存在16G左右。
 
-- 后续加入了kaggle的部分真实人脸数据集，可以参考这个链接去自动下载所需要的真是人脸。（主要还是为了解决 pos和neg的数据imbalance的问题）
+- 后续加入了kaggle的部分真实人脸数据集，可以参考这个链接去自动下载所需要的真实人脸。（主要还是为了解决 pos和neg的数据imbalance的问题）
   Kaggle链接：[Kaggle human faces](https://www.kaggle.com/search?q=human+face+dataset+in%3Adatasets)
 
 | <mark>**训练第二轮**</mark> |  数据量     | Precision       | Recall       | F1_score       | Acc       |
