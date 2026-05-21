@@ -5,7 +5,7 @@
 - 你需要自己创建一个checkpoints文件夹，checkpoints 文件夹是预训练模型（包含FreqNet的特征提取层+ViT-L的特征提取层即可）
   可从以下链接进行下载：通过Baidu网盘分享的文件: https://pan.baidu.com/s/15f5xOzYvCFNql01gUx48nw?pwd=6666 提取码: 6666
 - output文件夹内是训练的模型参数，按照时间makefile生成的，里面的best_model.pt文件就是训练的模型参数，可以实例化model文件夹里的模型文件（gly_model_v2）后直接```torch.load()```
-  best_model.pt文件链接：通过网盘分享的文件：run_20260413_133506链接: https://pan.baidu.com/s/1NUnq-_EAyTKWPZ44abu1Aw?pwd=7777 提取码: 7777
+  best_model.pt文件链接： 通过网盘分享的文件：best_model.pth 链接: https://pan.baidu.com/s/1zsp7MMJsMg-oduLEoc5m4A?pwd=8888 提取码: 8888
 - ./model里面的 gly_model_v2.py是重写的模型结构class文件，直接实例化这个文件里的class。
 - gly_train_v2.py是可以直接跑的训练代码
 - gly_single.py和gly_batch_test.py分别是单张预测和文件夹内图片预测的统计脚本。
